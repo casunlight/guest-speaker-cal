@@ -1,4 +1,11 @@
 GuestSpeakerCal::Application.routes.draw do
+  resources :speakers
+
+  resources :days
+
+  resources :weeks
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

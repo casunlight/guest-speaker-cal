@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @speaker.name %>
+</p>
+
+<p>
+  <b>Lecture title:</b>
+  <%= @speaker.lecture_title %>
+</p>
+
+<p>
+  <b>Lecture description:</b>
+  <%= @speaker.lecture_description %>
+</p>
+
+<p>
+  <b>Day:</b>
+  <%= @speaker.day_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_speaker_path(@speaker) %> |
+<%= link_to 'Back', speakers_path %>
