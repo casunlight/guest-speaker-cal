@@ -60,7 +60,7 @@ class SpeakersController < ApplicationController
 
     respond_to do |format|
       if @speaker.update_attributes(params[:speaker])
-        format.html { redirect_to @speaker, notice: 'Speaker was successfully updated.' }
+        format.html { redirect_to calendar_path, notice: 'Speaker was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

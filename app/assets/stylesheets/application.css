@@ -12,14 +12,169 @@
  *= require_tree .
  */
 
-html {
-  
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-  padding: 20px;
+  font-family: Helvetica, Arial, sans-serif;
+  padding: 5px 20px 20px;
+}
+
+header {
+  height: 83px;
+  margin-bottom: 10px;
+}
+
+clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+#wrapper {
+  width: 980px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: 'Merriweather', Georgia, serif;
+  margin: 0 0 10px;
+  text-align: right;
+  color: #999;
+  padding-top: 49px;
+}
+
+h2 {
+  font-family: 'Merriweather', Georgia, serif;
+  margin: 25px 0 10px;
+  color: #4c4c4c;
+  clear: both;
+}
+
+pre {
+  font-family: Arial, Verdana, sans-serif;
+  display: inline;
+  padding: 0;
+  word-wrap: break-word;
+  text-wrap: normal;
+  /*white-space: normal;*/
 }
 
 table {
+  padding: 0;
+  margin: 0;
   width: 100%;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 0;
+}
+
+tr:nth-child(odd) {
+  background: #efefef;
+}
+
+tr:nth-child(even) {
+  background: #fff;
+}
+
+th {
+  font-family: Georgia, serif;
+  background: #ccc;
+  color: #4c4c4c;
+  font-size: 1em;
+}
+
+th, td {
+  vertical-align: top;
+  border-top: 0;
+  border-left: 0;
+  padding: 10px;
+  border-right: 1px dotted #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+td {
+  font-size: 1.1em;
+}
+
+.logo {
+  float: left;
+}
+
+.day {
+  width: 5%;
+}
+
+.topics {
+  width: 50%;
+}
+
+.speakers {
+  width: 30%;
+}
+
+.date {
+  width: 15%;
+}
+
+.date_txt {
+  font-size: 0.85em;
+}
+
+a:link, a:visited {
+  color: rgb(38, 196, 255);blue;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  color: #aaa;
+  text-decoration: none;
+}
+
+input, textarea {
+  padding: 3px;
+  border: 1px solid #ccc;
+  color: #000;
+  margin: 5px 0 5px;
+}
+
+input[type="submit"] {
+  padding: 5px;
+  background: #ccc;
+  color: #000;
+}
+
+input[type="submit"]:hover {
+  background: #333;
+  color: white;
+}
+
+@media screen and (max-width: 1010px) {
+  .logo {
+    float: none;
+  }
+  
+  header {
+    height: auto;
+  }
+
+  h1 {
+    padding-top: 0;
+  }
+  #wrapper {
+    width: 90%;
+  }
+
+  .day, .topics, .speakers, .date {
+    width: auto;
+  }
 }
