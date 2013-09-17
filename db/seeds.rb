@@ -532,11 +532,3 @@ d57 = Day.create(
   :ordinal => 57,
   :topics => '...',
   :week_id => w_id)
-
-# Create Speakers
-
-s1 = Speaker.create(
-  :name => 'Eugene Leychenko',
-  :lecture_title => 'Growth Hacking with Apps',
-  :lecture_description => 'Growth hacking with apps, based on Eugene\'s Skillshare course: Black Hat Ninja Tactics: 17 Things They Don\'t Teach In B-School ',
-  :day_id => 8)
