@@ -4,5 +4,5 @@
 2. cd guest-speaker-cal
 3. bundle install
 4. rails s
-5. http://localhost:3000
+5. http://localhost:3000/calendar
 
