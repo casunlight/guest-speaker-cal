@@ -12,6 +12,8 @@
  *= require_tree .
  */
 
+/****************************** UNIVERSALS ******************************/
+
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -26,11 +28,12 @@ body {
 }
 
 header {
-  height: 83px;
+  width: 100%;
   margin-bottom: 10px;
+  border-bottom: 1px dotted #ccc;
 }
 
-clearfix:after {
+.clearfix:after {
   content: ".";
   display: block;
   clear: both;
@@ -39,7 +42,7 @@ clearfix:after {
   height: 0;
 }
 
-#wrapper {
+.wrapper {
   width: 980px;
   margin: 0 auto;
 }
@@ -57,6 +60,12 @@ h2 {
   margin: 25px 0 10px;
   color: #4c4c4c;
   clear: both;
+}
+
+h3 {
+  font-family: 'Merriweather', Georgia, serif;
+  margin: 20px 0 10px;
+  color: #4c4c4c;
 }
 
 pre {
@@ -106,6 +115,48 @@ td {
   font-size: 1.1em;
 }
 
+p {
+  margin: 10px 0 20px;
+}
+
+#day_info {
+  width: 40%;
+  float: right;
+  padding-top: 25px;
+}
+
+#speaker_input {
+  width: 60%;
+  float: left;
+}
+
+/****************************** FORMS ******************************/
+
+input, textarea {
+  padding: 3px;
+  border: 1px solid #ccc;
+  color: #000;
+  margin: 5px 0 5px;
+  font-size: 18px;
+}
+
+textarea {
+  height: 300px;
+}
+
+input[type="submit"] {
+  padding: 5px;
+  background: #ccc;
+  color: #000;
+}
+
+input[type="submit"]:hover {
+  background: #333;
+  color: white;
+}
+
+/****************************** TD CLASS ******************************/
+
 .logo {
   float: left;
 }
@@ -130,8 +181,10 @@ td {
   font-size: 0.85em;
 }
 
+/****************************** LINKS ******************************/
+
 a:link, a:visited {
-  color: rgb(38, 196, 255);blue;
+  color: rgb(38, 196, 255);
   text-decoration: none;
 }
 
@@ -140,23 +193,27 @@ a:hover, a:active {
   text-decoration: none;
 }
 
-input, textarea {
-  padding: 3px;
-  border: 1px solid #ccc;
-  color: #000;
-  margin: 5px 0 5px;
+.destroy a:link, .destroy a:visited {
+  color: red;
+  text-decoration: none;
 }
 
-input[type="submit"] {
-  padding: 5px;
-  background: #ccc;
+.destroy a:hover, .destroy a:active {
   color: #000;
+  text-decoration: none;
 }
 
-input[type="submit"]:hover {
-  background: #333;
-  color: white;
+.speaker_name a:link, .speaker_name a:visited {
+  color: #333;
+  text-decoration: none;
 }
+
+.speaker_name a:hover, .speaker_name a:active {
+  color: #000;
+  text-decoration: none;
+}
+
+/****************************** MEDIA ******************************/
 
 @media screen and (max-width: 1010px) {
   .logo {
@@ -170,11 +227,32 @@ input[type="submit"]:hover {
   h1 {
     padding-top: 0;
   }
-  #wrapper {
+  .wrapper {
     width: 90%;
   }
 
   .day, .topics, .speakers, .date {
     width: auto;
   }
+}
+
+/****************************** ERRORS ******************************/
+
+#error_explanation {
+  margin: 0 0 20px;
+}
+
+#error_explanation h2 {
+  color: red;
+}
+
+#error_explanation  ul {
+  padding: 10px;
+  background: rgba(255,0,0,.25);
+  border: 1px solid red;
+  list-style: none;
+}
+
+#error_explanation  li {
+  color: #000;
 }

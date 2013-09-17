@@ -1,5 +1,13 @@
-<h2>New speaker</h2>
-
-<%= render 'form' %>
-
-<%= link_to 'Back', speakers_path %>
+<div class="clearfix">
+  <div id="day_info">
+    <h3>You are signing up for day <%= @day.ordinal %></h3>
+    <p><%= @day.date %></p>
+    <h3>Topics</h3>
+    <pre>&nbsp;&nbsp;&nbsp;&nbsp;<%= @day.topics %></pre>
+    <p><%= link_to 'Back', calendar_path %></p>
+  </div>
+  <div id="speaker_input">
+    <h2>New speaker info</h2>
+    <%= render 'form' %>
+  </div>
+</div>

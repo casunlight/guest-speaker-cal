@@ -7,12 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div id="wrapper">
   <header class="clearfix">
-    <%= image_tag("fis-logo.png", size: "135x91", class: "logo") %>
-    <h1>Guest Speaker Calendar</h1>
+    <div class="wrapper">
+      <%= image_tag("fis-logo.png", size: "135x91", class: "logo") %>
+      <h1>Guest Speaker Calendar</h1>
+    </div><!-- .wrapper -->
   </header>
+  <div class="wrapper">
   <%= yield %>
-  </div><!-- #wrapper -->
+  </div><!-- .wrapper -->
 </body>
 </html>

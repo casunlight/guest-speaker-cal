@@ -16,7 +16,7 @@
             <span class="available">none</span>
           <% else %>
             <% day.speakers.each do |speaker| %>
-              <a href="/speakers/<%= speaker.id %>/edit"><%= speaker.full_name %></a>
+              <span class="speaker_name"><a href="/speakers/<%= speaker.id %>/edit"><%= speaker.full_name %></a></span>
             <% end %>
           <% end %>
           <br />

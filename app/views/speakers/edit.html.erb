@@ -2,6 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @speaker %> |
-<%= link_to 'Destroy', @speaker, method: :delete, data: { confirm: 'Are you sure?' } %> | 
-<%= link_to 'Back', speakers_path %>
+<%= link_to 'Back', calendar_path %> | 
+<span class="destroy"><%= link_to 'Destroy', @speaker, method: :delete, data: { confirm: 'Are you sure?' } %></span>
