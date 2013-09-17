@@ -25,7 +25,7 @@ gem 'jquery-rails'
 
 group :production do
   # gems specifically for Heroku go here
-  gem "pg"git 
+  gem "pg"
 end
 
 # To use ActiveModel has_secure_password
