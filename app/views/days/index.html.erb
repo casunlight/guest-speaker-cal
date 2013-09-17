@@ -2,9 +2,10 @@
 
 <table>
   <tr>
-    <th>Date</th>
-    <th>Ordinal</th>
+    <th>Number</th>
     <th>Topics</th>
+    <th>Speaker</th>
+    <th>Date</th>
     <th>Week</th>
     <th></th>
     <th></th>
@@ -13,10 +14,19 @@
 
 <% @days.each do |day| %>
   <tr>
-    <td><%= day.date %></td>
     <td><%= day.ordinal %></td>
     <td><%= day.topics %></td>
-    <td><%= day.week_id %></td>
+    <td>
+    <% if day.speakers.first.nil? %>
+      <span class="available">available</span>
+    <% else %>
+      <% day.speakers.each do |speaker| %>
+        <a href="/speakers/<%= speaker.id %>"><%= speaker.full_name %></a>
+      <% end %>
+    <% end %>
+    </td>
+    <td><%= day.date %></td>
+    <td><%= day.week.ordinal %></td>
     <td><%= link_to 'Show', day %></td>
     <td><%= link_to 'Edit', edit_day_path(day) %></td>
     <td><%= link_to 'Destroy', day, method: :delete, data: { confirm: 'Are you sure?' } %></td>

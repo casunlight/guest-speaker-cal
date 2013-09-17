@@ -44,7 +44,7 @@ class SpeakersController < ApplicationController
 
     respond_to do |format|
       if @speaker.save
-        format.html { redirect_to @speaker, notice: 'Speaker was successfully created.' }
+        format.html { redirect_to calendar_path, notice: 'Speaker was successfully created.'}
         format.json { render json: @speaker, status: :created, location: @speaker }
       else
         format.html { render action: "new" }
@@ -76,7 +76,7 @@ class SpeakersController < ApplicationController
     @speaker.destroy
 
     respond_to do |format|
-      format.html { redirect_to speakers_url }
+      format.html { redirect_to calendar_path }
       format.json { head :no_content }
     end
   end

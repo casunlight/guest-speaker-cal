@@ -13,10 +13,10 @@
 
 <% @speakers.each do |speaker| %>
   <tr>
-    <td><%= speaker.name %></td>
+    <td><%= speaker.full_name %></td>
     <td><%= speaker.lecture_title %></td>
     <td><%= speaker.lecture_description %></td>
-    <td><%= speaker.day_id %></td>
+    <td><a href="/days/<%= speaker.day_id %>"><%= speaker.day_id %></a></td>
     <td><%= link_to 'Show', speaker %></td>
     <td><%= link_to 'Edit', edit_speaker_path(speaker) %></td>
     <td><%= link_to 'Destroy', speaker, method: :delete, data: { confirm: 'Are you sure?' } %></td>

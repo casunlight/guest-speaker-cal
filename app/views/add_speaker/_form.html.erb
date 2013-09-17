@@ -23,7 +23,7 @@
     <%= f.label :lecture_description %><br />
     <%= f.text_area :lecture_description %>
   </div>
-    <%= f.hidden_field :day_id %>
+    <input type="hidden" name="speaker[day_id]" value="<%= @day_id %>">
   <div class="actions">
     <%= f.submit %>
   </div>

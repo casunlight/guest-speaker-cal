@@ -76,7 +76,7 @@ class DaysController < ApplicationController
     @day.destroy
 
     respond_to do |format|
-      format.html { redirect_to days_url }
+      format.html { redirect_to calendar_path }
       format.json { head :no_content }
     end
   end

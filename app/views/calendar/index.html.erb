@@ -1,0 +1,31 @@
+<h1>Guest Speaker Calendar</h1>
+
+<% @weeks.each do |week| %>
+  <h2>Week <%= week.ordinal %></h2>
+  <table>
+    <tr>
+      <th>Day</th>
+      <th>Topics</th>
+      <th>Speakers</th>
+      <th>Date</th>
+    </tr>
+    <% week.days.each do |day| %>
+      <tr>
+        <td><%=  day.ordinal %></td>
+        <td><pre><%= day.topics %></pre></td>
+        <td>
+          <% if day.speakers.first.nil? %>
+            <span class="available">none</span>
+          <% else %>
+            <% day.speakers.each do |speaker| %>
+              <a href="/speakers/<%= speaker.id %>/edit"><%= speaker.full_name %></a>
+            <% end %>
+          <% end %>
+          <br />
+          <a href="/add_speaker/<%= day.id %>">schedule me</a>
+        </td>
+        <td><%= day.date %></td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>

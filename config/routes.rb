@@ -5,6 +5,10 @@ GuestSpeakerCal::Application.routes.draw do
 
   resources :weeks
 
+  get '/calendar', :to => 'calendar#index'
+
+  get '/add_speaker/:day_id', :to => 'add_speaker#new'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
