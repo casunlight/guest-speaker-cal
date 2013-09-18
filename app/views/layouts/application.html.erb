@@ -18,6 +18,7 @@
       </a>
       <nav>
         <ul id="nav" class="nav">
+          <% if @cal_view %>
           <li>
             <span>Weeks</span>
             <ul class="sub-menu">
@@ -47,6 +48,9 @@
               <li><a href="#TDD">TDD</a></li>
             </ul>
           </li>
+          <% else %>
+          <li><%= link_to 'Back', calendar_path %></li>
+          <% end %>
         </ul>
       </nav>
     </div><!-- .wrapper -->
