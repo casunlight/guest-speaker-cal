@@ -7,7 +7,7 @@
       <th class="speakers">Speakers</th>
       <th class="date">Date</th>
     </tr>
-    <% week.days.each do |day| %>
+    <% week.days.order("id ASC").each do |day| %>
       <tr>
         <td><%=  day.ordinal %></td>
         <td><pre>&nbsp;&nbsp;&nbsp;&nbsp;<%= day.topics %></pre></td>

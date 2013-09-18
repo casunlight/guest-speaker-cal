@@ -2,7 +2,7 @@ class WeeksController < ApplicationController
   # GET /weeks
   # GET /weeks.json
   def index
-    @weeks = Week.all
+    @weeks = Week.order("id ASC")
 
     respond_to do |format|
       format.html # index.html.erb

@@ -11,7 +11,7 @@
     <th></th>
   </tr>
 
-<% @speakers.order(id DESC).each do |speaker| %>
+<% @speakers.each do |speaker| %>
   <tr>
     <td><%= speaker.full_name %></td>
     <td><%= speaker.lecture_title %></td>

@@ -2,7 +2,7 @@ class DaysController < ApplicationController
   # GET /days
   # GET /days.json
   def index
-    @days = Day.all
+    @days = Day.order("id ASC")
 
     respond_to do |format|
       format.html # index.html.erb
