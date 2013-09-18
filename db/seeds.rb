@@ -50,7 +50,7 @@ d2 = Day.create(
     Git Pull
     Git Fetch
     Setting up development environment
-    Learn the pain of running make, so that you can understand why Homebrew is so great.
+    Homebrew
     Vote on student website layouts',
   :week_id => w_id)
 
@@ -184,7 +184,7 @@ d14 = Day.create(
     Actions
     Methods
     Controller Responsibility
-    Taking Data and Sending to Model (basic ORM, no AR), They must write their own writers / readers',
+    ORM',
   :week_id => w_id)
 
 d15 = Day.create(
