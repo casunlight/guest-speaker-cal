@@ -8,7 +8,7 @@
     <th></th>
   </tr>
 
-<% @weeks.each do |week| %>
+<% @weeks.order(id DESC).each do |week| %>
   <tr>
     <td><%= week.ordinal %></td>
     <td><%= link_to 'Show', week %></td>
