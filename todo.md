@@ -1,4 +1,0 @@
-- Setup New Relic 
-- Route Admin/cal -DONE
-- *week anchor links
-- *side nav

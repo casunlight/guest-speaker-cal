@@ -7,7 +7,8 @@
 3. bundle install
 4. rake db:seed
 5. rails s
-6. http://localhost:3000/calendar
+6. See guest facing calendar: http://localhost:3000/calendar
+7. See admin calendar: http://localhost:3000/admin_calendar
 
 ## Production Deployment
 
