@@ -23,8 +23,8 @@ $(function() {
     function minifyNav() {
       $('object#minify').css({'display':'block'});
       $('object#bigify').css({'display':'none'});
-      $('header').css({'height':'65px'});
-      $('nav').css({'margin-top':'10px'});
+      $('header').css({'height':'45px'});
+      $('nav').css({'margin-top':'-5px'});
       $('object#minify').css({'margin':'10px 0 0'});
     }
 

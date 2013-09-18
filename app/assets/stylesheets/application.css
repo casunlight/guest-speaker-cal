@@ -285,6 +285,133 @@ a:hover, a:active {
   color: #000;
 }
 
+/* ===[ Header Navigation Styles ]===================================================== */
+
+.select-menu, .select { display: none }
+
+.menu-main-container { position: relative }
+
+#nav { float: right }
+
+#nav, #nav ul {
+    margin: 13px 0 0 0;
+    padding: 0;
+    list-style-type: none;
+    list-style-position: outside;
+    position: relative;
+    line-height: 1.5em;
+    z-index: 1000;
+}
+
+#nav a,#nav span {
+    display: block;
+    padding: 5px;
+    color: #aaa;
+    text-decoration: none;
+    text-align: left;
+    outline: none;
+    font-weight: normal;
+    font-family: 'Merriweather', Georgia, serif;
+}
+
+
+#nav > .current-menu-item > a, #nav > li a:hover { color: #4C4C4C }
+
+.plus { color: #aaa }
+
+#nav ul {
+    position: absolute;
+    display: none;
+    top: 15px;
+}
+
+#nav li {
+    float: left;
+    position: relative;
+    list-style-type: none;
+    padding-bottom: 17px;
+}
+
+#nav li a, #nav span {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 8px 15px;
+}
+
+#nav > li > a { padding: 5px 12px }
+
+#nav span { 
+  padding: 5px 12px;
+  cursor: default;
+}
+#nav > li:last-child a {
+    margin-right: 0px;
+    padding-right: 0px;
+    border-right: none;
+}
+
+#nav > li:first-child a {
+
+}
+
+#nav li ul a {
+    width: 150px;
+    height: auto;
+    float: left;
+    font-size: 12px;
+    color: #999;
+}
+
+#nav .sub-menu {
+    box-shadow: rgba(0,0,0, 0.07) 0px 1px 2px;
+    -moz-box-shadow: rgba(0,0,0, 0.07) 0px 1px 2px;
+    -webkit-box-shadow: rgba(0,0,0, 0.07) 0px 1px 2px;
+}
+
+#nav .sub-menu li {
+    background: #fff;
+    border-left: solid 1px #eee;
+    border-right: solid 1px #eee;
+}
+
+#nav .sub-menu li:first-child { border-top: solid 1px #eee }
+
+#nav > li > ul { margin-top: 15px }
+
+#nav li ul li {
+    border-bottom: solid 1px #eee;
+    padding-bottom: 0px;
+}
+
+#nav li ul li:last-child { border-bottom: none }
+
+#nav li ul li a {
+    margin-right: 0px;
+    font-size: 10px;
+}
+
+#nav li ul li a:hover {
+    background: #f9f9f9;
+    color: #555;
+}
+
+#nav ul ul { top: auto; }
+
+#nav ul ul li:first-child { border-top: solid 1px #eee }
+
+#nav li ul ul {
+    left: 150px;
+    margin: -1px 0 0 0;
+    padding-right: 5px;
+}
+
+#nav li ul ul li { border-top: none }
+
+#nav li:hover ul ul, #nav li:hover ul ul ul, #nav li:hover ul ul ul ul { display: none }
+
+#nav li:hover ul, #nav li li:hover ul, #nav li li li:hover ul, #nav li li li li:hover ul { display: block }
+
 /****************************** MEDIA ******************************/
 
 @media screen and (max-width: 1010px) {
