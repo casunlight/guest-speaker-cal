@@ -13,4 +13,5 @@
 
 1. heroku create
 2. git push heroku
-3. heroku run rake:seed
+3. heroku run rake:migrate
+4. heroku run rake:seed
