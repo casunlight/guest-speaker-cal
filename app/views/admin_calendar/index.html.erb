@@ -1,5 +1,7 @@
+<h1>Guest Speaker Signup</h1>
+<p>Click a 'schedule me' link below to sign up for days that have related topics or that work best for you</p>
 <% @weeks.each do |week| %>
-  <h2>Week <%= week.ordinal %></h2>
+  <h2 id="week<%= week.ordinal %>">Week <%= week.ordinal %> //</h2>
   <table cellpadding="0" cellspacing="0">
     <tr>
       <th class="day">Day</th>
@@ -22,7 +24,7 @@
           <br />
           <a href="/add_speaker/<%= day.id %>">schedule me</a>
         </td>
-        <td><span class="date_txt"><%= day.date %></span></td>
+        <td><span class="date_txt"><%= day.date.strftime("%b %d, %Y") %></span></td>
       </tr>
     <% end %>
   </table>

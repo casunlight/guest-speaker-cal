@@ -9,13 +9,55 @@
 </head>
 <body>
   <header class="clearfix">
-    <div class="wrapper">
-      <%= image_tag("fis-logo.png", size: "135x91", class: "logo") %>
-      <h1>Guest Speaker Calendar</h1>
+    <div class="wrapper clearfix">
+      <a class="logos" href="http://flatironschool.com/" title="The Flatiron School">
+        <h1 class="logo-text">
+          <object id="bigify" data="/assets/flatiron-logo-high-res.svg" type="image/svg+xml" class="logo"></object>
+          <object id="minify" data="/assets/flatiron-horz-logo-high-res.svg" type="image/svg+xml" class="logo"></object>
+        </h1>
+      </a>
+      <nav>
+        <ul id="nav" class="nav">
+          <li>
+            <span>Weeks</span>
+            <ul class="sub-menu">
+              <li><a href="rubycurriculum.html">Web</a></li>
+              <li><a href="iOScurriculum.html">iOS</a></li>
+              <li><a href="http://info.flatironschool.com/highschool" target="_blank">High School</a></li>
+              <li><a href="/nycworkforce1/" target="_blank">Fellowship</a></li>
+            </ul>
+          </li>
+          <li>
+            <span>Topics</span>
+            <ul class="sub-menu">
+              <li><a href="faculty.html">Faculty</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="speakers.html">Guest Speakers</a></li>
+              <li><a href="sponsors.html">Sponsors</a></li>
+            </ul>
+          </li>
+        </ul>
+
+
+
+        <a href="#week1"><%= @week_dates[0].strftime("%b %d") %> - <%= @week_dates[1].strftime("%b %d") %></a> | 
+        <a href="#week2"><%= @week_dates[2].strftime("%b %d") %> - <%= @week_dates[3].strftime("%b %d") %></a> |
+        <a href="#week3"><%= @week_dates[4].strftime("%b %d") %> - <%= @week_dates[5].strftime("%b %d") %></a> | 
+        <a href="#week4"><%= @week_dates[6].strftime("%b %d") %> - <%= @week_dates[7].strftime("%b %d") %></a> | 
+        <a href="#week5"><%= @week_dates[8].strftime("%b %d") %> - <%= @week_dates[9].strftime("%b %d") %></a> |
+        <a href="#week6"><%= @week_dates[10].strftime("%b %d") %> - <%= @week_dates[11].strftime("%b %d") %></a> |<br>
+        <a href="#week7"><%= @week_dates[12].strftime("%b %d") %> - <%= @week_dates[13].strftime("%b %d") %></a> | 
+        <a href="#week8"><%= @week_dates[14].strftime("%b %d") %> - <%= @week_dates[15].strftime("%b %d") %></a> |
+        <a href="#week9"><%= @week_dates[16].strftime("%b %d") %> - <%= @week_dates[17].strftime("%b %d") %></a> |
+        <a href="#week10"><%= @week_dates[18].strftime("%b %d") %> - <%= @week_dates[19].strftime("%b %d") %></a> | 
+        <a href="#week11"><%= @week_dates[20].strftime("%b %d") %> - <%= @week_dates[21].strftime("%b %d") %></a> |
+        <a href="#week12"><%= @week_dates[22].strftime("%b %d") %> - <%= @week_dates[23].strftime("%b %d") %></a>
+        </ul>
+      </nav>
     </div><!-- .wrapper -->
   </header>
-  <div class="wrapper">
-  <%= yield %>
+  <div class="wrapper content">
+    <%= yield %>
   </div><!-- .wrapper -->
 </body>
 </html>
