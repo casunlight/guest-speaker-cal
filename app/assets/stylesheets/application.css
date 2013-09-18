@@ -53,6 +53,7 @@ h1 {
   text-align: right;
   color: #999;
   padding-top: 49px;
+  font-weight: normal;
 }
 
 h2 {
@@ -60,12 +61,14 @@ h2 {
   margin: 25px 0 10px;
   color: #4c4c4c;
   clear: both;
+  font-weight: normal;
 }
 
 h3 {
   font-family: 'Merriweather', Georgia, serif;
   margin: 20px 0 10px;
   color: #4c4c4c;
+  font-weight: normal;
 }
 
 pre {

@@ -11,7 +11,17 @@
       <tr>
         <td><%=  day.ordinal %></td>
         <td><pre>&nbsp;&nbsp;&nbsp;&nbsp;<%= day.topics %></pre></td>
-        <td><a href="/add_speaker/<%= day.id %>">schedule me</a></td>
+        <td>
+          <% if day.speakers.first.nil? %>
+            <span class="available">none</span>
+          <% else %>
+            <% day.speakers.each do |speaker| %>
+              <span class="speaker_name"><a href="/speakers/<%= speaker.id %>/edit"><%= speaker.full_name %></a></span>
+            <% end %>
+          <% end %>
+          <br />
+          <a href="/add_speaker/<%= day.id %>">schedule me</a>
+        </td>
         <td><span class="date_txt"><%= day.date %></span></td>
       </tr>
     <% end %>

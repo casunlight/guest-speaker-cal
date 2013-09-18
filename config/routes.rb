@@ -8,6 +8,8 @@ GuestSpeakerCal::Application.routes.draw do
 
   get '/calendar', :to => 'calendar#index'
 
+  get '/admin_calendar/', :to => 'admin_calendar#index'
+
   get '/add_speaker/:day_id', :to => 'add_speaker#new'
 
   root :to => 'calendar#index'
