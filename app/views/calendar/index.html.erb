@@ -1,8 +1,16 @@
 <h1>Guest Speaker Signup</h1>
-<h4>Click a 'schedule me' link below to sign up for days that have related topics or that work best for you</h4>
+<h4>Click a 'schedule me' link below to sign up for days that have related topics or that work best for you. <a href="#schedule">Jump to the Schedule</a></h4>
+
+<p>We tremendously value bringing in a diverse and vibrant set of voices into the school. In the past we've been tremendously fortunate to have amazing <a href="http://flatironschool.com/speakers.html">guest speakers</a>. We would like to open this oppertunity up to the community and invite you to come give a talk.</p>
+
+<p>Speaking at the Flatiron School is easy! If you want, you can just do a Q/A. Students love it! Just being able to ask you questions about how you got started and seeing you take time from your day to speak to them is tremendously encouraging. We also love live coding! Just narrate working through a real problem. It's a rare thing to be able to see when learning how to code. So no pressure, just come say hi, you'll enjoy it!</p>
+
+<p>Below you'll find a break down of topics we cover on what day. Your talk or topic <strong>does not need to exactly correspond</strong> to the dates below. Anything in the vicinity is fine. And it doesn't need to be decided right now, just submit your interest and we'll contact you. Feel free to sign up for more than one day. Finally, you can always just <a href="mailto:avi+speakers@flatironschool.com">email us.</a></p> 
+
+
 <% @weeks.each do |week| %>
   <h2 id="week<%= week.ordinal %>">Week <%= week.ordinal %> //</h2>
-  <table cellpadding="0" cellspacing="0">
+  <table cellpadding="0" cellspacing="0" id="schedule">
     <tr>
       <th class="day">Day</th>
       <th class="topics">Topics</th>
