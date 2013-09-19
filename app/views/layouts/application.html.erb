@@ -18,10 +18,10 @@
       </a>
       <nav>
         <ul id="nav" class="nav">
+          <% if @cal_view %>
           <li>
             <span>Weeks</span>
             <ul class="sub-menu">
-            <% if @cal_view %>
               <li><a href="#week1"><%= @week_dates[0].strftime("%b %d") %> - <%= @week_dates[1].strftime("%b %d") %></a></li>
               <li><a href="#week2"><%= @week_dates[2].strftime("%b %d") %> - <%= @week_dates[3].strftime("%b %d") %></a></li>
               <li><a href="#week3"><%= @week_dates[4].strftime("%b %d") %> - <%= @week_dates[5].strftime("%b %d") %></a></li>
@@ -34,9 +34,6 @@
               <li><a href="#week10"><%= @week_dates[18].strftime("%b %d") %> - <%= @week_dates[19].strftime("%b %d") %></a></li> 
               <li><a href="#week11"><%= @week_dates[20].strftime("%b %d") %> - <%= @week_dates[21].strftime("%b %d") %></a></li>
               <li><a href="#week12"><%= @week_dates[22].strftime("%b %d") %> - <%= @week_dates[23].strftime("%b %d") %></a></li>
-              <% else %>
-              <li><%= link_to 'Back', calendar_path %></li>
-              <% end %>
             </ul>
           </li>
           <li>
@@ -51,6 +48,9 @@
               <li><a href="#TDD">TDD</a></li>
             </ul>
           </li>
+          <% else %>
+            <li><%= link_to 'Back', calendar_path %></li>
+          <% end %>
         </ul>
       </nav>
     </div><!-- .wrapper -->
