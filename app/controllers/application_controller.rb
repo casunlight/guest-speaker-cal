@@ -9,6 +9,7 @@ class ApplicationController < ActionController::Base
     weeks.each do |week|
       @week_dates << week.days.order("id ASC").first.date
       @week_dates << week.days.order("id ASC").last.date
+      puts week.inspect
     end
   end
 end

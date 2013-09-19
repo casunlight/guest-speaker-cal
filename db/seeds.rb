@@ -509,6 +509,8 @@ d53 = Day.create(
 
 #week12
 
+w_id += 1
+
 d54 = Day.create(
   :date => Date.new(2013,12,9),
   :ordinal => 54,
